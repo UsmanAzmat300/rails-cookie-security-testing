@@ -1,0 +1,9 @@
+<h1>Protected Account Page</h1>
+
+<% if flash[:notice] %>
+  <p style="color: green;"><%= flash[:notice] %></p>
+<% end %>
+
+<p>Welcome, <strong><%= @user.username %></strong>. This page is only visible to logged-in users.</p>
+
+<%= button_to "Log Out", logout_path, method: :delete %>
